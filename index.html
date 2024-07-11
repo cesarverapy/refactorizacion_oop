@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>a star</title> <!-- título del documento -->
+  <style>
+    body {
+      display: flex; /* flexbox para centrar el contenido */
+      justify-content: center; /* centrar horizontalmente */
+      align-items: center; /* centrar verticalmente */
+      flex-direction: column; /* colocar los elementos en columna */
+      height: 100vh; /* altura completa de la ventana */
+      margin: 0; /* eliminar márgenes */
+    }
+    #canvas {
+      border: 2px solid #000000; /* borde negro de 2px para el canvas */
+    }
+    .controls {
+      margin-top: 20px; /* espacio superior para los controles */
+    }
+    .controls button {
+      margin: 0 5px; /* espacio lateral entre los botones */
+    }
+  </style>
+  <script src="astar/pathfinding.js" defer></script> <!-- incluir el script de javascript -->
+</head>
+<body>
+  <canvas id="canvas" width="500" height="500"></canvas> <!-- canvas para el mapa -->
+  <div class="controls">
+    <button id="set-start">marcar entrada</button> <!-- botón para marcar el punto de inicio -->
+    <button id="set-end">marcar salida</button> <!-- botón para marcar el punto de fin -->
+    <button id="set-obstacle">marcar obstáculos</button> <!-- botón para marcar obstáculos -->
+    <button id="start" disabled>iniciar algoritmo</button> <!-- botón para iniciar el algoritmo -->
+  </div>
+</body>
+</html>
